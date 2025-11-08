@@ -13,6 +13,8 @@ return new class extends Migration
     {
         Schema::create('results', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('booking_id')->unique()->constrained()->cascadeOnDelete();
+            $table->decimal('score', 5, 2); // e.g., 98.50
             $table->timestamps();
         });
     }
