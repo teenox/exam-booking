@@ -15,9 +15,9 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->text('description')->nullable();
-            $table->decimal('pass_score', 5, 2); //the score required to pass the exam eg 75.00
             $table->date('exam_date');
             $table->time('exam_time');
+            $table->unsignedInteger('capacity')->nullable();
             $table->timestamps();
         });
     }

@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Result extends Model
 {
-    protected $fillable = ['booking_id', 'score', 'comments', 'published_at'];
+    protected $fillable = ['booking_id', 'score'];
 
     public function booking() { 
         return $this->belongsTo(Booking::class); 
